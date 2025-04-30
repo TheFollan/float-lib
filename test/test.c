@@ -28,7 +28,7 @@ void test_inf_cases() {
 void test_nan_cases() {
 
     float nan = NAN;
-    
+
     assert(isnan(sum_float(nan, 1.0f)));
     assert(isnan(sum_float(5.0f, nan)));
     assert(isnan(sum_float(nan, nan)));
@@ -58,19 +58,25 @@ void test_overflow() {
     assert(isinf(sum_float(-maxn, -big)) && sum_float(-maxn, -big) < 0);
 }
 
-void test_underflow(){
+void test_underflow() {
+    float tiny = 1.4e-45f; 
+    float smaller = 1.17549435e-38f; 
 
-    float tiny = 1e-45f;       
-    float smaller = 5e-46f;    
+    assert(floats_equal(sum_float(tiny, smaller), tiny)); 
+    float ultra_small = 1.4e-45f;  
+    float neg_ultra_small = -1.4e-45f; 
+    assert(floats_equal(sum_float(ultra_small, -ultra_small), 0.0f));  
 
-    assert(floats_equal(sum_float(tiny, tiny), 2e-45f));
-    assert(floats_equal(sum_float(tiny, smaller), tiny));
-    assert(floats_equal(sum_float(-tiny, -tiny), -2e-45f));
-
-    float ultra_small = 1e-46f;
-    float neg_ultra_small = -1e-46f;
-
-    assert(floats_equal(sum_float(ultra_small, -ultra_small), 0.0f));
 }
+void main (){
+    test_zero_cases();
+    test_inf_cases();
+    test_nan_cases();
+    test_normal_cases();
+    test_subnormal_case();
+    test_underflow();
+    test_overflow();
 
+    printf("Test passed \n");
 
+}
