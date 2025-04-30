@@ -1,2 +1,2 @@
 # float-lib
-Library for working with floating point numbers
+Library for working with floating point numbers (32 bits).
