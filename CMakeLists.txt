@@ -4,7 +4,7 @@ set(CMAKE_CXX_COMPILER "")
 
 cmake_minimum_required(VERSION 3.10)
 
-project(Float-Lib С)
+project(Float-Lib C)
 
 set(CMAKE_C_STANDARD 99)
 
