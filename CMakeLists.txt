@@ -21,4 +21,4 @@ target_compile_options(test_program PRIVATE -Wall -lm)
 
 enable_testing()
 
-add_test(NAME Float_tests COMMAND test_program)
+add_test(NAME Float_tests COMMAND ${CMAKE_BINARY_DIR}/test_program)
