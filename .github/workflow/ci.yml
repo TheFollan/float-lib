@@ -19,7 +19,7 @@ jobs:
       uses: actions/chekout@v2
 
 
-      -name: Set Up CMAke
+      -name: Set Up CMake
       
       uses: actions/setup-cmake@v2
 
@@ -36,4 +36,4 @@ jobs:
 
       -name: Run tests
 
-      run: cmake --build , --terget test 
+      run: cmake --build , --target test 
