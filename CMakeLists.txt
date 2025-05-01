@@ -1,10 +1,10 @@
 set(CMAKE_C_COMPILER gcc)
 
-set(CMAKE_CXX_COMPILER "no_compiler")
+set(CMAKE_CXX_COMPILER "")
 
 cmake_minimum_required(VERSION 3.10)
 
-project(Float-Lib)
+project(Float-Lib С)
 
 set(CMAKE_C_STANDARD 99)
 
