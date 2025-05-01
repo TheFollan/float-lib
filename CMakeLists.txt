@@ -4,6 +4,10 @@ project(Float-Lib)
 
 set(CMAKE_C_STANDARD 99)
 
+set(CMAKE_C_COMPILER gcc)
+
+set(CMAKE_CXX_COMPILER "no_compiler")
+
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 set(SOURCE_FILES
