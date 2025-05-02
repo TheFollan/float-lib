@@ -37,7 +37,7 @@ Library for working with floating point numbers (32 bits).
 3. **Запуск тестов** 
 
     ```sh
-    cmake --build . --target test
+    ctest 
 
 ### **Использование библиотеки**
 
