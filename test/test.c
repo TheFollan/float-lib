@@ -108,7 +108,6 @@ void test_underflow() {
     }
 
     float ultra_small = 1.4e-45f;  
-    float neg_ultra_small = -1.4e-45f; 
     if (!floats_equal(sum_float(ultra_small, -ultra_small), 0.0f)) {
         printf("Test failed: sum_float(ultra_small, -ultra_small) != 0.0f\n");
     }
